@@ -100,16 +100,16 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         #! Choreo DB setup
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("DB_NAME"),
-        'USER': os.getenv("DB_USER"),
-        'PASSWORD': os.getenv("DB_PWD"),
-        'HOST': os.getenv("DB_HOST"),
-        'PORT': os.getenv("DB_PORT"),
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': os.getenv("DB_NAME"),
+        # 'USER': os.getenv("DB_USER"),
+        # 'PASSWORD': os.getenv("DB_PWD"),
+        # 'HOST': os.getenv("DB_HOST"),
+        # 'PORT': os.getenv("DB_PORT"),
         
-        #! Disabled, use when running localhost 
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
+        #! Disable when not running localhost 
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
